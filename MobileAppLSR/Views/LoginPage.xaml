@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="MobileAppLSR.Views.LoginPage"
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="Beige">
+    
+    <ContentPage.Content>
+        
+        <StackLayout Padding="10,0,10,0" VerticalOptions="Center">
+
+            <Image Source="Lsrgames.png" WidthRequest="150" HeightRequest="120" />
+
+            <Entry x:Name="txtUserName" Text="{Binding pseudo, Mode=TwoWay}" Placeholder="Pseudo" />
+            
+            <Entry x:Name="txtPassword" IsPassword="True" Text="{Binding password, Mode=TwoWay}" Placeholder="Mot de passe"/>
+            
+            <Button VerticalOptions="Center" Text="Connexion" Command="{Binding LoginCommand}"
+                    CornerRadius="50"
+                    BorderColor="Black"
+                    BorderWidth="1.5"
+                    BackgroundColor="Gold"/>
+            
+            <Label x:Name="erreuro" TextColor="Red" Text="{Binding erreurco, Mode=TwoWay}"/>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
